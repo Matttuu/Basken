@@ -55,15 +55,47 @@
 
     <!--Containeren-->
     <div class="container" style="margin-top:30px">
-        <div class="row">
-            <div class="col-sm-4">
-                <h2>Om mig</h2>
-                <h5>Billede af mig:</h5>
-                <div class="profilbillede"></div>
-                <p>Her er jeg dagen efter jeg smed min hjerne ud sidst</p>
-
-            </div>
-        </div>
+            <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                      <div class="well well-sm">
+                        <form class="form-horizontal" action="" method="post">
+                        <fieldset>
+                          <legend class="text-center">Kontakt mig</legend>
+                  
+                          <!-- Navn-->
+                          <div class="form-group">
+                            <label class="col-md-3 control-label" for="name">Navn</label>
+                            <div class="col-md-9">
+                              <input id="name" name="name" type="text" placeholder="Dit navn" class="form-control">
+                            </div>
+                          </div>
+                  
+                          <!-- Email -->
+                          <div class="form-group">
+                            <label class="col-md-3 control-label" for="email">Din E-mail</label>
+                            <div class="col-md-9">
+                              <input id="email" name="email" type="text" placeholder="Din email" class="form-control">
+                            </div>
+                          </div>
+                  
+                          <!-- Besked -->
+                          <div class="form-group">
+                            <label class="col-md-3 control-label" for="message">Din besked</label>
+                            <div class="col-md-9">
+                              <textarea class="form-control" id="message" name="message" placeholder="Skriv din flækkeren besked her..." rows="5"></textarea>
+                            </div>
+                          </div>
+                  
+                          <!-- Form -->
+                          <div class="form-group">
+                            <div class="col-md-12 text-right">
+                              <a href ="index.html" submit class="btn btn-primary btn-lg" >Send</button> </a>
+                            </div>
+                          </div>
+                        </fieldset>
+                        </form>
+                      </div>
+                    </div>
     </div>
     </div>
   </body>
