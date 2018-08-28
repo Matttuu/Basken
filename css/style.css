@@ -3,16 +3,77 @@
     grid-template-columns: auto auto auto auto;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
-    background-color:#716F71;
+    background-color:rgb(77, 76, 77);
     padding: 10px;
   }
   .grid-item {
     /* Brug denne farve til grid item #141214 */ 
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 5px;
-
+    
     text-align: center;
-    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-  
+    
+   
   }
+
+  label {
+    width:200px;
+    height:200px;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: block;
+    cursor: pointer;
+}
+
+
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+  z-index: 20;
+  
+}
+
+.card div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #FFF;
+  text-align: center;
+  line-height: 200px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+.card .back {
+  background: #222;
+  color: #FFF;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+label:hover .card {
+  -webkit-transform: rotateY(20deg);
+  transform: rotateY(20deg);
+  box-shadow: 0 20px 20px rgba(50,50,50,.2);
+}
+
+input {
+  display: none;
+}
+
+:checked + .card {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+label:hover :checked + .card {
+  transform: rotateY(160deg);
+  -webkit-transform: rotateY(160deg);
+  box-shadow: 0 20px 20px rgba(255,255,255,.2);
+}
